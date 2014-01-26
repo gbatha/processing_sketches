@@ -5,12 +5,13 @@
 PImage img;
 int shiftIntensity;
 int maxBarHeight;
+
 void setup(){
   img = loadImage("mirrors-edge_800.jpg");
   size(img.width, img.height);
   shiftIntensity = int(img.width*0.1);
-  maxBarHeight = 100;
-  frameRate(8);  
+  maxBarHeight = 200;
+  frameRate(8); 
 }
 
 void draw(){
