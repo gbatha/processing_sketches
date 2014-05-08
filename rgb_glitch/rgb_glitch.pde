@@ -7,7 +7,7 @@ int shiftIntensity;
 int maxBarHeight;
 
 void setup(){
-  img = loadImage("mirrors-edge_800.jpg");
+  img = loadImage("digimon1.png");
   size(img.width, img.height);
   shiftIntensity = int(img.width*0.1);
   maxBarHeight = 200;
@@ -38,6 +38,6 @@ void draw(){
     
     yAxis += h;
   }
-  //saveFrame("frame-###.jpg");
-  //if(frameCount > 8){ noLoop(); }
+  saveFrame("frame-###.jpg");
+  if(frameCount > 8){ noLoop(); }
 }

@@ -3,7 +3,7 @@ PImage[] frames;
 void setup(){
   frames = new PImage[5];
   for(int i = 0; i < frames.length; i ++){
-    frames[i] = loadImage("nasa"+i+".png");
+    frames[i] = loadImage("virus"+i+".png");
   }
   
   size(frames[0].width, frames[0].height);
@@ -16,12 +16,12 @@ void setup(){
 void draw(){
   //noLoop();
   rectMosh();
-  //saveFrame("nasaRectMosh##.png");
-  //if(frameCount > 12){ exit(); }
+  saveFrame("virusRectMosh##.png");
+  if(frameCount > 12){ exit(); }
 }
 
 void rectMosh(){
-  for(int y = 0; y < height; y++){
+  for(int y = 0; y < height; y+=50){
     int index = (int)random(frames.length);
     int x = (int)random(-width/2, width);
     PImage getRect = frames[index].get(x, y, (int)random(width), (int)random(height));
